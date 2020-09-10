@@ -43,7 +43,8 @@ df
 plot(test$Scores, type="l",col="red",xlim=c(1,8),ylim = c(10,100),
      xlab = "Hours",ylab = "Scores", main = "Predicted vs Observed Scores")
 lines(pred,type="l",col="blue")
-
+legend(1, 100, legend=c("Observed", "Predicted"),
+       col=c("red", "blue"), lty=1:1, cex=0.8)
 #Evaluating the model using RMSE
 root_mean_se<-RMSE(pred = pred$Scores,obs = test$Scores)
 root_mean_se
